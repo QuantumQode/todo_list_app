@@ -14,6 +14,8 @@ function App() {
       password: passwordReg
     }).then((response) => {
       console.log(response);
+      setUsernameReg('');
+      setPasswordReg('');
     });
   }
   return (
@@ -21,9 +23,9 @@ function App() {
       <div className="Registeration">
         <h1>Registration</h1>
         <label>Username</label>
-        <input type="text" placeholder="Enter Username" onChange = {(e) => {setUsernameReg(e.target.value)}} />
+        <input type="text" placeholder="Enter Username" value={usernameReg} onChange = {(e) => {setUsernameReg(e.target.value)}} />
         <label>Password</label>
-        <input type="password" placeholder="Enter Password" onChange = {(e) => {setPasswordReg(e.target.value)}} />
+        <input type="password" placeholder="Enter Password" value={passwordReg} onChange = {(e) => {setPasswordReg(e.target.value)}} />
         <button onClick={register}>Register</button>
         </div>
       <div className="Login">
