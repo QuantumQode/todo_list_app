@@ -20,21 +20,29 @@ function App() {
   }
   return (
     <div className="App">
-      <div className="Registeration">
+      <div className="Registration">
         <h1>Registration</h1>
         <label>Username</label>
-        <input type="text" placeholder="Enter Username" value={usernameReg} onChange = {(e) => {setUsernameReg(e.target.value)}} />
+        <input type="text" 
+        placeholder="Enter Username" 
+        value={usernameReg} 
+        onChange = {(e) => {setUsernameReg(e.target.value)}} />
         <label>Password</label>
-        <input type="password" placeholder="Enter Password" value={passwordReg} onChange = {(e) => {setPasswordReg(e.target.value)}} />
-        <button onClick={register}>Register</button>
+        <input type="password" 
+        placeholder="Enter Password" 
+        value={passwordReg} 
+        onChange = {(e) => {setPasswordReg(e.target.value)}} />
+        <button className='btn' onClick={register}>Register</button>
         </div>
       <div className="Login">
         <h1>Login</h1>
         <label>Username</label>
-        <input type="text" placeholder="Enter Username" />
+        <input type="text" 
+        placeholder="Enter Username" />
         <label>Password</label>
-        <input type="password" placeholder="Enter Password" />
-        <button>Login</button>
+        <input type="password" 
+        placeholder="Enter Password" />
+        <button className='btn'>Login</button>
       </div>
     </div>
   );
