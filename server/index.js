@@ -1,7 +1,8 @@
 const express = require('express');
+const mysql = require('mysql');
 const app = express();
 
-const mysql = require('mysql');
+
 const db = mysql.createConnection({
     host: 'localhost',
     user: 'root',
@@ -33,26 +34,6 @@ db.connect((err) => {
     });
 });
 
-app.get('/select', (req, res) => {
-    db.query('SELECT * FROM users', (err, result) => {
-        if (err) {
-            console.log(err);
-        } else {
-            res.send(result);
-        }
-    });
-});
-
-
-app.get('/insert', (req, res) => {
-    db.query('INSERT INTO users (userName, userPassword) VALUES ("admin", "admin")', (err, result) => {
-        if (err) {
-            console.log(err);
-        } else {
-            res.send('Values inserted');
-        }
-    });
-});
 
 
 app.listen(3001, () => {
