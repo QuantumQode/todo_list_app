@@ -1,3 +1,8 @@
+//This file sets up an Express server that connects to a MySQL database and handles user registration requests.
+//The server listens on port 3001 and has a single POST endpoint /register that inserts a new user into the users table in the database.
+//The endpoint expects a JSON object with username and password fields in the request body.
+// The server responds with a success message if the user is successfully inserted, or an error message if there is an issue inserting the user.
+
 const express = require('express');
 const mysql = require('mysql');
 const app = express();
