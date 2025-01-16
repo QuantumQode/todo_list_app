@@ -1,6 +1,9 @@
 // This file is the main file of the react app. It contains the form for user registration.
+// The import statement at the top imports the useState and Axios hooks from the react and axios libraries.
 import React, { useState } from 'react';
+// Axios is a library that allows you to make HTTP requests from the browser.
 import Axios from 'axios';
+// App.css is a CSS file that contains styles for the app.
 import './App.css';
 
 function App() {

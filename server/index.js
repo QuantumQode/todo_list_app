@@ -28,7 +28,7 @@ db.connect((err) => {
     }
     console.log('Connected to the database');
 
-    // Create a variable that contains the SQL to creaate users table if it doesn't exist
+    // Create a variable that contains the SQL to create users table if it doesn't exist
     const createUsersTableQuery = `
         CREATE TABLE IF NOT EXISTS users (
             id INT AUTO_INCREMENT PRIMARY KEY,
