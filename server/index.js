@@ -1,13 +1,16 @@
 //This file sets up an Express server that connects to a MySQL database and handles user registration requests.
-//The server listens on port 3001 and has a single POST endpoint /register that inserts a new user into the users table in the database.
-//The endpoint expects a JSON object with username and password fields in the request body.
-// The server responds with a success message if the user is successfully inserted, or an error message if there is an issue inserting the user.
 
+// These const variables import the express, mysql, and cors libraries.
+// The express library is used to create the server.
 const express = require('express');
+// The mysql library is used to connect to the MySQL database.
 const mysql = require('mysql');
+// app is a variable that contains the express function.
 const app = express();
+// The cors variable imports the cors library, which allows the server to accept requests from the client.
 const cors = require('cors');
 
+// The app.use() function tells the server to use the express.json() and cors() middleware.
 app.use(express.json()); 
 app.use(cors());
 

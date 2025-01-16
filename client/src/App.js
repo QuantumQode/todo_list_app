@@ -8,19 +8,25 @@ import './App.css';
 
 function App() {
 
+  // These 2 lines create state variables usernameReg and passwordReg, and functions setUsernameReg and setPasswordReg to update them.
   const [usernameReg, setUsernameReg] = useState('')
   const [passwordReg, setPasswordReg] = useState('')
 
+  // This function sends a POST request to the /register endpoint on the server with the username and password entered in the form.
   const register = () => {
     Axios.post('http://localhost:3001/register', {
       username: usernameReg,
       password: passwordReg
     }).then((response) => {
+      // This line logs the response from the server to the console.
       console.log(response);
+      // This line clears the username and password fields in the form after the user is successfully registered.
       setUsernameReg('');
       setPasswordReg('');
     });
   }
+
+  // This block of code contains the JSX for the registration form.
   return (
     <div className="App">
       <div className="Registration">
